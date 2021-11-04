@@ -60,11 +60,11 @@ always_ff @ (posedge ck)
 // controller state machine 
 
 // implement a state machine to control the FIR
-always_ff @(posedge clock, posedge rst)
+always_ff @(posedge ck, posedge rst)
     begin: SEQ                              //Sequential label for modelsim
         if (rst)                         	//Reset
             state <= waiting;
-		else                                //Update state on clockedge
+		else                                //Update state on ckedge
             state <= next_state;
     end
 
