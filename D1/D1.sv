@@ -24,11 +24,11 @@ module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
 	// 
 	/////////////////////////////////
 	
-	assign [23:8] writedata_left = [15:0] out_left;
-	assign [15:0] in_left = [23:8] readdata_left;
+	assign writedata_left = out_left;
+	assign in_left = readdata_left;
 	
-	assign [23:8] writedata_right = [15:0] out_right;
-	assign [15:0] in_right = [23:8] readdata_right;
+	assign writedata_right = out_right;
+	assign in_right = readdata_right;
 	
 	assign read = read_ready;
 	assign write = write_ready;
