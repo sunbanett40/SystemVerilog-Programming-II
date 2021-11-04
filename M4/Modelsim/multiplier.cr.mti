@@ -1,0 +1,36 @@
+H:/M4/adder.sv {1 {vlog -work work -vopt -sv -stats=none H:/M4/adder.sv
+Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} H:/M4/register.sv {1 {vlog -work work -vopt -sv -stats=none H:/M4/register.sv
+Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} H:/M4/test_multiplier.sv {1 {vlog -work work -vopt -sv -stats=none H:/M4/test_multiplier.sv
+Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+-- Compiling module test_multiplier
+
+Top level modules:
+	test_multiplier
+
+} {} {}} H:/M4/reg_m.sv {1 {vlog -work work -vopt -sv -stats=none H:/M4/reg_m.sv
+Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+-- Compiling module reg_m
+
+Top level modules:
+	reg_m
+
+} {} {}} H:/M4/multiplier.sv {1 {vlog -work work -vopt -sv -stats=none H:/M4/multiplier.sv
+Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+-- Compiling module multiplier
+
+Top level modules:
+	multiplier
+
+} {} {}}

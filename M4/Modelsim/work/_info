@@ -1,0 +1,170 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.01, Jan 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/MentorGraphics/modeltech64_2020.1/examples
+T_opt
+!s110 1635763110
+V97k_O_O[@MHHV]HFc6b>Q1
+04 15 4 work test_multiplier fast 0
+=1-04d4c402f014-617fc3a4-1f8-4300
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.1;71
+vadder
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1635763069
+!i10b 1
+!s100 :D:hmO4fzNHCe42THMa]43
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEUhMMKH^c=_XNWG5Qi3=O1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dH:/M4/Modelsim
+w1540909444
+8H:/M4/adder.sv
+FH:/M4/adder.sv
+!i122 6
+L0 23 6
+Z5 OL;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1635763069.000000
+!s107 H:/M4/adder.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/M4/adder.sv|
+!i113 0
+Z6 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vmultiplier
+R1
+!s110 1635763070
+!i10b 1
+!s100 <0F^g`OW=hJzdP;KS>3Mg0
+R2
+IWB:kf9PXTd8ABo:8T7Meb3
+R3
+S1
+R4
+w1540807854
+8H:/M4/multiplier.sv
+FH:/M4/multiplier.sv
+!i122 7
+L0 23 14
+R5
+r1
+!s85 0
+31
+Z7 !s108 1635763070.000000
+!s107 H:/M4/multiplier.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/M4/multiplier.sv|
+!i113 0
+R6
+R0
+vreg_m
+R1
+Z8 !s110 1635763071
+!i10b 1
+!s100 8l>R=EzQiGL;>B5h1JDYZ3
+R2
+ID?H8KDE4<Ia9g0FENzV1^3
+R3
+S1
+R4
+w1540807836
+8H:/M4/reg_m.sv
+FH:/M4/reg_m.sv
+!i122 8
+L0 22 8
+R5
+r1
+!s85 0
+31
+R7
+!s107 H:/M4/reg_m.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/M4/reg_m.sv|
+!i113 0
+R6
+R0
+vregister
+R1
+R8
+!i10b 1
+!s100 X`VgOJ?D=5iS?>71:_T;Y2
+R2
+ID<Ck9zah:5k`@DThfEPT_1
+R3
+S1
+R4
+w1540807904
+8H:/M4/register.sv
+FH:/M4/register.sv
+!i122 9
+L0 23 22
+R5
+r1
+!s85 0
+31
+!s108 1635763071.000000
+!s107 H:/M4/register.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/M4/register.sv|
+!i113 0
+R6
+R0
+vsequencer
+R1
+!s110 1635763094
+!i10b 1
+!s100 05_=<hb43^j@H?3mB8Z0k3
+R2
+ISK]]8RYKGAZ]GV<`XYn:G0
+R3
+S1
+R4
+w1635763087
+8H:/M4/sequencer.sv
+FH:/M4/sequencer.sv
+!i122 11
+L0 22 59
+R5
+r1
+!s85 0
+31
+!s108 1635763094.000000
+!s107 H:/M4/sequencer.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/M4/sequencer.sv|
+!i113 0
+R6
+R0
+vtest_multiplier
+R1
+!s110 1635763072
+!i10b 1
+!s100 hmT:X9zLg@io5zJ2Vhiz[1
+R2
+IDdG1cZl>OZjInU5hF?73L2
+R3
+S1
+R4
+w1635717115
+8H:/M4/test_multiplier.sv
+FH:/M4/test_multiplier.sv
+!i122 10
+L0 22 38
+R5
+r1
+!s85 0
+31
+!s108 1635763072.000000
+!s107 H:/M4/test_multiplier.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/M4/test_multiplier.sv|
+!i113 0
+R6
+R0

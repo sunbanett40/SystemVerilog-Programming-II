@@ -22,8 +22,7 @@
 module sequencer (input logic start, clock, Q0, n_rst,
  output logic add, shift, ready, reset);
 
-logic count_flag;
-logic [2:0] count = 3'b100;
+logic [3:0] count;
  
 enum {idle, adding, shifting, stopped} present_state, next_state;
 
@@ -31,23 +30,31 @@ always_ff @(posedge clock, negedge n_rst)
     begin: SEQ                              //Sequential label for modelsim
         if (!n_rst)                         //Reset
             present_state <= idle;
-        else                                //Update state on clockedge
+        else if (present_state == idle)
+			begin
+			count <= 4;
+			present_state <= next_state;
+			end
+			else if (present_state == adding)                         //Reset
+            begin
+				count <= count-1;
+				present_state <= next_state;
+			end
+
+		else                                //Update state on clockedge
             present_state <= next_state;
-        if (count_flag)                         //Reset
-            count <= count-1;
     end
- 
- 
+
+
 always_comb
     begin: COM                              //Combinational label for modelsim
- 
+
         //Set default values of output
         add = '0;
         shift = '0;
         ready = '0;
         reset = '0;
-        count_flag = '0;
- 
+
         unique case (present_state)         //Unique case label gives compiler error if a state is missing
             idle : begin
                 reset = '1;                 //Assert unconditional output
@@ -57,7 +64,6 @@ always_comb
                     next_state = idle;
             end
             adding : begin
-                count_flag = '1;            //update count
                 if (Q0)                     //Conditional to progress to next state
                     add = '1;               //Assert conditional output
                 next_state = shifting;
@@ -78,5 +84,6 @@ always_comb
             end
         endcase
     end
+
 
 endmodule

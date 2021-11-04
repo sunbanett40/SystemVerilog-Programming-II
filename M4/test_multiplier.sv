@@ -48,7 +48,7 @@ initial
   Qin = '0;
   #5ns start = '1;
   Min = 3;
-  Qin = 5;
+  Qin = 7;
   @(posedge ready) // Wait for ready to become true
     if (AQ==Min*Qin)
       $display("Test passed: at %t Min = %d, Qin = %d, AQ = %d", $time, Min, Qin, AQ);

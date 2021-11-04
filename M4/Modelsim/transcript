@@ -1,0 +1,29 @@
+# Compile of adder.sv was successful.
+# Compile of multiplier.sv was successful.
+# Compile of reg_m.sv was successful.
+# Compile of register.sv was successful.
+# Compile of sequencer.sv failed with 1 errors.
+# Compile of test_multiplier.sv was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of sequencer.sv was successful.
+vsim -voptargs=+acc work.test_multiplier
+# vsim -voptargs="+acc" work.test_multiplier 
+# Start time: 10:38:27 on Nov 01,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "sequencer(fast)".
+# Loading sv_std.std
+# Loading work.test_multiplier(fast)
+# Loading work.multiplier(fast)
+# Loading work.adder(fast)
+# Loading work.register(fast)
+# Loading work.reg_m(fast)
+# Loading work.sequencer(fast)
+add wave -position end  sim:/test_multiplier/Min
+add wave -position end  sim:/test_multiplier/Qin
+add wave -position end  sim:/test_multiplier/AQ
+run -all
+# Test passed: at                  170 Min =  3, Qin =  7, AQ =  21
+# Break key hit
+# Break in Module sequencer at H:/M4/sequencer.sv line 29
+# End time: 12:35:29 on Nov 01,2021, Elapsed time: 1:57:02
+# Errors: 0, Warnings: 7
