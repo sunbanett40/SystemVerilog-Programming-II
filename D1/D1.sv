@@ -6,12 +6,11 @@ module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
 		   input logic AUD_DACLRCK, AUD_ADCLRCK, AUD_BCLK, AUD_ADCDAT, 
 		   output logic AUD_DACDAT);
 	
-	// FIR filter modules
+	// FIR filter module io
 	logic signed [15:0] in_left, in_right;
+	logic input_ready, ck, rst;
 	logic signed [15:0] out_left, out_right;
-	
-	fir fir_left (.in(in_left),.out(out_left));
-	fir fir_right (.in(in_right),.out(out_right));
+	logic output_ready;
 	
 	// Local wires.
 	wire read_ready, write_ready, read, write;
@@ -32,6 +31,25 @@ module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
 	
 	assign read = read_ready;
 	assign write = write_ready;
+	
+	assign input_ready = read_ready;
+	assign ck = CLOCK_50;
+	assign rst = reset;
+	assign write_ready = output_ready;
+	
+	// FIR filter modules
+
+	/*
+	module fir (input logic signed [15:0] in,
+       input logic input_ready, ck, rst ,
+       output logic signed [15:0] out,
+       output logic output_ready);
+	*/
+	
+	fir fir_left (.in(in_left), .input_ready(input_ready), .ck(ck), .rst(rst),
+				.out(out_left), .output_ready(output_ready));
+	fir fir_right (.in(in_right), .input_ready(input_ready), .ck(ck), .rst(rst),
+				.out(out_right), .output_ready(output_ready));
 	
 /////////////////////////////////////////////////////////////////////////////////
 // Audio CODEC interface. 
