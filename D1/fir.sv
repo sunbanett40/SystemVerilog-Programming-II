@@ -51,10 +51,10 @@ always_ff @(posedge ck)
 // implement a synchronous counter that counts up through all 16 values of address
 // when a count signal is true
 always_ff @ (posedge ck)
-	begin: COUNTER
-		if (count)
+	begin: COUNTER							//Label for modelsim
+		if (count)							//If count update address
 			address <= address + 1;
-		else
+		else								//Else set it to zero
 			address <= 0;
 	end
 // controller state machine 
@@ -62,9 +62,9 @@ always_ff @ (posedge ck)
 // implement a state machine to control the FIR
 always_ff @(posedge ck, posedge rst)
     begin: SEQ                              //Sequential label for modelsim
-        if (rst)                         	//Reset
+        if (rst)                         	//Asynchronous Positive Reseet
             state <= waiting;
-		else                                //Update state on ckedge
+		else                                //Update state on clockedge
             state <= next_state;
     end
 
@@ -80,27 +80,27 @@ always_comb
 
         unique case (state)         		//Unique case label gives compiler error if a state is missing
             waiting : begin
-                reset_accumulator = '1;     //Assert unconditional output
-                if (input_ready)            //Conditional to progress to next state
+                reset_accumulator = '1;     //Assert unconditional output reset_accumulator
+                if (input_ready)            //Conditional to progress to loading
                     next_state = loading;
                 else                        //Else stay in ready state
                     next_state = waiting;
             end
             loading : begin
-				load =  '1;					//Assert unconditional output
-				reset_accumulator = '1;		//Assert unconditional output
-                next_state = processing;
+				load =  '1;					//Assert unconditional output load
+				reset_accumulator = '1;		//Assert unconditional output reset_accumulator
+                next_state = processing;	//Progress to processing
             end
             processing : begin
-                count = '1;                 //Assert unconditional output
-                if (address == 15)          //Conditional to progress to next state
+                count = '1;                 //Assert unconditional output count
+                if (address == 15)          //Conditional to progress to saving
                     next_state = saving;
-                else                        //Else stay in ready state
+                else                        //Else increment address again
                     next_state = processing;
             end
             saving : begin
-                output_ready = '1;          //Assert unconditional output
-                next_state = waiting;
+                output_ready = '1;          //Assert unconditional output output_ready
+                next_state = waiting;		//Return to ready state
             end
         endcase
     end
