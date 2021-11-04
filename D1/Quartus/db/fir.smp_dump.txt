@@ -1,0 +1,7 @@
+
+State Machine - |fir|state
+Name state.saving state.processing state.loading state.waiting 
+state.waiting 0 0 0 0 
+state.loading 0 0 1 1 
+state.processing 0 1 0 1 
+state.saving 1 0 0 1 

@@ -102,6 +102,8 @@ always_comb
                 output_ready = '1;          //Assert unconditional output output_ready
                 next_state = waiting;		//Return to ready state
             end
+			default:						//If unknown return to ready state
+				next_state = waiting;
         endcase
     end
 endmodule
