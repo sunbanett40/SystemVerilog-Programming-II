@@ -33,7 +33,10 @@ always_ff @(posedge clock, negedge n_rst)
             present_state <= idle;
         else                                //Update state on clockedge
             present_state <= next_state;
+        if (count_flag)                         //Reset
+            count <= count-1;
     end
+ 
  
 always_comb
     begin: COM                              //Combinational label for modelsim
@@ -43,17 +46,18 @@ always_comb
         shift = '0;
         ready = '0;
         reset = '0;
+        count_flag = '0;
  
         unique case (present_state)         //Unique case label gives compiler error if a state is missing
             idle : begin
-                reset = '1;               //Assert unconditional output
+                reset = '1;                 //Assert unconditional output
                 if (start)                  //Conditional to progress to next state
                     next_state = adding;
                 else                        //Else stay in ready state
                     next_state = idle;
             end
             adding : begin
-                count <= count-1;           //update count
+                count_flag = '1;            //update count
                 if (Q0)                     //Conditional to progress to next state
                     add = '1;               //Assert conditional output
                 next_state = shifting;
@@ -73,5 +77,6 @@ always_comb
                     next_state = stopped;
             end
         endcase
-    end  
+    end
+
 endmodule
