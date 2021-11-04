@@ -6,6 +6,13 @@ module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
 		   input logic AUD_DACLRCK, AUD_ADCLRCK, AUD_BCLK, AUD_ADCDAT, 
 		   output logic AUD_DACDAT);
 	
+	// FIR filter modules
+	logic signed [15:0] in_left, in_right;
+	logic signed [15:0] out_left, out_right;
+	
+	fir fir_left (.in(in_left),.out(out_left));
+	fir fir_right (.in(in_right),.out(out_right));
+	
 	// Local wires.
 	wire read_ready, write_ready, read, write;
 	wire [23:0] readdata_left, readdata_right;
@@ -17,8 +24,12 @@ module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
 	// 
 	/////////////////////////////////
 	
-	assign writedata_left = readdata_left;
-	assign writedata_right = readdata_right;
+	assign [23:8] writedata_left = [15:0] out_left;
+	assign [15:0] in_left = [23:8] readdata_left;
+	
+	assign [23:8] writedata_right = [15:0] out_right;
+	assign [15:0] in_right = [23:8] readdata_right;
+	
 	assign read = read_ready;
 	assign write = write_ready;
 	
