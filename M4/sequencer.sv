@@ -39,14 +39,14 @@ always_comb
     begin: COM                              //Combinational label for modelsim
  
         //Set default values of output
-        add = '0
-        shift = '0
-        ready = '0
-        reset = '0
+        add = '0;
+        shift = '0;
+        ready = '0;
+        reset = '0;
  
         unique case (present_state)         //Unique case label gives compiler error if a state is missing
             idle : begin
-                output1 = '1;               //Assert unconditional output
+                reset = '1;               //Assert unconditional output
                 if (start)                  //Conditional to progress to next state
                     next_state = adding;
                 else                        //Else stay in ready state
@@ -54,13 +54,9 @@ always_comb
             end
             adding : begin
                 count <= count-1;           //update count
-                if (QO)                     //Conditional to progress to next state
-                    begin
-                        ADD = '1;           //Assert conditional output
-                        next_state = shifting;  
-                    end
-                else
-                    next_state = shifting;
+                if (Q0)                     //Conditional to progress to next state
+                    add = '1;               //Assert conditional output
+                next_state = shifting;
             end
             shifting : begin
                 shift = '1;                 //Assert unconditional output
