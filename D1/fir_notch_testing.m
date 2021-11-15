@@ -1,10 +1,9 @@
-ord = 62;
+ord = 31;
 
 low = 0.000001;
-bnd = [0.4 0.6];
+bnd = [0.2 0.4];
 
-b = fir1(15,0.5)
-bM = fir1(ord,[low bnd]);
+bM = fir1(ord-1,[low bnd]);
 
 disp(sprintf('%d,',round(bM*32768)))
 

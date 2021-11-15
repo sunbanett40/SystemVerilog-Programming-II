@@ -1,6 +1,6 @@
 // FIR N stages; M bit samples.
 
-module fir #(parameter N=16, parameter M=24)
+module fir #(parameter N=31, parameter M=24)
 		(input logic signed [M-1:0] in,
 		input logic input_ready, ck, rst, 
 		output logic signed [M-1:0] out,
@@ -15,10 +15,7 @@ sample_array samples [0:N-1];
 // https://stackoverflow.com/questions/61995984/matlab-script-use-in-system-verilog-using-snps-vcs-tool
 
 const sample_array coefficients [0:N-1] =
-     '{-81, -134,  318, 645,
-     -1257, -2262, 4522, 14633,
-     14633, 4522, -2262,-1257,
-     645, 318, -134, -81};
+     '{0,104,149,53,-81,0,169,-235,-1361,-1842,0,3434,4926,1836,-3786,26461,-3786,1836,4926,3434,0,-1842,-1361,-235,169,0,-81,53,149,104,0};		
 
 logic unsigned [$clog2(M)-1:0] address; //clog2 of 16 is 4
 

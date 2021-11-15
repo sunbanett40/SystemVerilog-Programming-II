@@ -1,16 +1,13 @@
-module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
+// FIR N stages; M bit samples.
+
+module D1 #(parameter N = 31, parameter M = 24)
+			(input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
 	       // I2C Audio/Video config interface 
            output logic FPGA_I2C_SCLK, inout wire FPGA_I2C_SDAT, 
            // Audio CODEC
            output logic AUD_XCK, 
 		   input logic AUD_DACLRCK, AUD_ADCLRCK, AUD_BCLK, AUD_ADCDAT, 
 		   output logic AUD_DACDAT);
-	
-	// FIR filter module io
-	//logic signed [15:0] in_left, in_right;
-	//logic input_ready, ck, rst;
-	//logic signed [15:0] out_left, out_right;
-	//logic output_ready;
 	
 	// Local wires.
 	wire read_ready, write_ready, read, write;
@@ -32,24 +29,12 @@ module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
 	assign read = read_ready;
 	//assign write = write_ready;
 	
-	//assign input_ready = read_ready;
-	//assign ck = CLOCK_50;
-	//assign rst = reset;
-	//assign write_ready = output_ready;
-	
 	// FIR filter modules
 
-	/*
-	module fir (input logic signed [15:0] in,
-       input logic input_ready, ck, rst ,
-       output logic signed [15:0] out,
-       output logic output_ready);
-	*/
-	
-	fir fir_left (.in(readdata_left[23:8]), .input_ready(write_ready), .ck(CLOCK_50), .rst(reset),
-				.out(writedata_left[23:8]), .output_ready(write));
-	fir fir_right (.in(readdata_right[23:8]), .input_ready(write_ready), .ck(CLOCK_50), .rst(reset),
-				.out(writedata_right[23:8]));
+	fir fir_left (.in(readdata_left[23:24-M]), .input_ready(write_ready), .ck(CLOCK_50), .rst(reset),
+				.out(writedata_left[23:24-M]), .output_ready(write));
+	fir fir_right (.in(readdata_right[23:24-M]), .input_ready(write_ready), .ck(CLOCK_50), .rst(reset),
+				.out(writedata_right[23:24-M]));
 	
 /////////////////////////////////////////////////////////////////////////////////
 // Audio CODEC interface. 

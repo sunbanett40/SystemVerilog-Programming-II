@@ -1,1 +1,8 @@
+H:/D1/SystemVerilog-Programming-II/D1/test_fir.sv {1 {vlog -work work -vopt -sv -stats=none H:/D1/SystemVerilog-Programming-II/D1/test_fir.sv
+Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+-- Compiling module test_fir
 
+Top level modules:
+	test_fir
+
+} {} {}}

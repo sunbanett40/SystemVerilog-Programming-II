@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for D1
-Mon Nov 15 11:30:33 2021
+Mon Nov 15 15:34:30 2021
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Standard Edition
 
 
@@ -100,16 +100,16 @@ agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.21        ;
+; Average used               ; 1.40        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.4%      ;
-;     Processor 3            ;   4.4%      ;
-;     Processor 4            ;   4.3%      ;
-;     Processor 5            ;   3.7%      ;
-;     Processor 6            ;   3.7%      ;
+;     Processor 2            ;   8.6%      ;
+;     Processor 3            ;   8.6%      ;
+;     Processor 4            ;   8.5%      ;
+;     Processor 5            ;   7.1%      ;
+;     Processor 6            ;   7.1%      ;
 +----------------------------+-------------+
 
 
@@ -125,13 +125,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary               ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 128.12 MHz ; 128.12 MHz      ; CLOCK_50   ;      ;
-+------------+-----------------+------------+------+
++-------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 97.46 MHz ; 97.46 MHz       ; CLOCK_50   ;      ;
++-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -146,7 +146,7 @@ HTML report is unavailable in plain text report export.
 +----------+--------+-----------------+
 ; Clock    ; Slack  ; End Point TNS   ;
 +----------+--------+-----------------+
-; CLOCK_50 ; -6.805 ; -2275.917       ;
+; CLOCK_50 ; -9.261 ; -3988.966       ;
 +----------+--------+-----------------+
 
 
@@ -155,7 +155,7 @@ HTML report is unavailable in plain text report export.
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 0.264 ; 0.000           ;
+; CLOCK_50 ; 0.247 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -176,7 +176,7 @@ No paths to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                  ; -2.225 ; -1334.046     ;
+; CLOCK_50                                                                                  ; -2.174 ; -1973.161     ;
 ; my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; 1.322  ; 0.000         ;
 ; CLOCK2_50                                                                                 ; 18.188 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
@@ -188,13 +188,13 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 128.27 MHz ; 128.27 MHz      ; CLOCK_50   ;      ;
-+------------+-----------------+------------+------+
++-------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary               ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 96.18 MHz ; 96.18 MHz       ; CLOCK_50   ;      ;
++-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -203,7 +203,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; -6.796 ; -2163.551      ;
+; CLOCK_50 ; -9.397 ; -3734.721      ;
 +----------+--------+----------------+
 
 
@@ -212,7 +212,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.227 ; 0.000          ;
+; CLOCK_50 ; 0.231 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -233,7 +233,7 @@ No paths to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                  ; -2.225 ; -1282.024     ;
+; CLOCK_50                                                                                  ; -2.174 ; -1852.000     ;
 ; my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; 1.322  ; 0.000         ;
 ; CLOCK2_50                                                                                 ; 18.191 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
@@ -250,7 +250,7 @@ No synchronizer chains to report.
 +----------+--------+-----------------+
 ; Clock    ; Slack  ; End Point TNS   ;
 +----------+--------+-----------------+
-; CLOCK_50 ; -3.644 ; -955.854        ;
+; CLOCK_50 ; -4.903 ; -1569.930       ;
 +----------+--------+-----------------+
 
 
@@ -259,7 +259,7 @@ No synchronizer chains to report.
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 0.177 ; 0.000           ;
+; CLOCK_50 ; 0.143 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -280,7 +280,7 @@ No paths to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                  ; -2.174 ; -1102.661     ;
+; CLOCK_50                                                                                  ; -2.174 ; -1473.861     ;
 ; my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; 1.322  ; 0.000         ;
 ; CLOCK2_50                                                                                 ; 17.854 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
@@ -297,7 +297,7 @@ No synchronizer chains to report.
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; -3.336 ; -776.901       ;
+; CLOCK_50 ; -4.493 ; -1206.298      ;
 +----------+--------+----------------+
 
 
@@ -306,7 +306,7 @@ No synchronizer chains to report.
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.162 ; 0.000          ;
+; CLOCK_50 ; 0.129 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -327,7 +327,7 @@ No paths to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                  ; -2.174 ; -1196.799     ;
+; CLOCK_50                                                                                  ; -2.174 ; -1681.591     ;
 ; my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; 1.322  ; 0.000         ;
 ; CLOCK2_50                                                                                 ; 17.804 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
@@ -344,13 +344,13 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
 ; Clock                                                                                      ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                                           ; -6.805    ; 0.162 ; N/A      ; N/A     ; -2.225              ;
+; Worst-case Slack                                                                           ; -9.397    ; 0.129 ; N/A      ; N/A     ; -2.174              ;
 ;  CLOCK2_50                                                                                 ; N/A       ; N/A   ; N/A      ; N/A     ; 17.804              ;
-;  CLOCK_50                                                                                  ; -6.805    ; 0.162 ; N/A      ; N/A     ; -2.225              ;
+;  CLOCK_50                                                                                  ; -9.397    ; 0.129 ; N/A      ; N/A     ; -2.174              ;
 ;  my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; N/A       ; N/A   ; N/A      ; N/A     ; 1.322               ;
-; Design-wide TNS                                                                            ; -2275.917 ; 0.0   ; 0.0      ; 0.0     ; -1334.046           ;
+; Design-wide TNS                                                                            ; -3988.966 ; 0.0   ; 0.0      ; 0.0     ; -1973.161           ;
 ;  CLOCK2_50                                                                                 ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  CLOCK_50                                                                                  ; -2275.917 ; 0.000 ; N/A      ; N/A     ; -1334.046           ;
+;  CLOCK_50                                                                                  ; -3988.966 ; 0.000 ; N/A      ; N/A     ; -1973.161           ;
 ;  my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
 +--------------------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
 
@@ -436,7 +436,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 63693    ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 4120385  ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -446,7 +446,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 63693    ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 4120385  ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -471,7 +471,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 295   ; 295  ;
+; Unconstrained Input Port Paths  ; 297   ; 297  ;
 ; Unconstrained Output Ports      ; 4     ; 4    ;
 ; Unconstrained Output Port Paths ; 17    ; 17   ;
 +---------------------------------+-------+------+
@@ -545,7 +545,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Standard Edition
-    Info: Processing started: Mon Nov 15 11:30:21 2021
+    Info: Processing started: Mon Nov 15 15:34:17 2021
 Info: Command: quartus_sta D1 -c D1
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -571,20 +571,20 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.805
+Info (332146): Worst-case setup slack is -9.261
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.805           -2275.917 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.264
+    Info (332119):    -9.261           -3988.966 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.247
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.264               0.000 CLOCK_50 
+    Info (332119):     0.247               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.225
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225           -1334.046 CLOCK_50 
+    Info (332119):    -2.174           -1973.161 CLOCK_50 
     Info (332119):     1.322               0.000 my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):    18.188               0.000 CLOCK2_50 
 Info: Analyzing Slow 1100mV 0C Model
@@ -597,20 +597,20 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.796
+Info (332146): Worst-case setup slack is -9.397
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.796           -2163.551 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.227
+    Info (332119):    -9.397           -3734.721 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.231
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.227               0.000 CLOCK_50 
+    Info (332119):     0.231               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.225
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225           -1282.024 CLOCK_50 
+    Info (332119):    -2.174           -1852.000 CLOCK_50 
     Info (332119):     1.322               0.000 my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):    18.191               0.000 CLOCK2_50 
 Info: Analyzing Fast 1100mV 85C Model
@@ -623,20 +623,20 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.644
+Info (332146): Worst-case setup slack is -4.903
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.644            -955.854 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.177
+    Info (332119):    -4.903           -1569.930 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.143
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.177               0.000 CLOCK_50 
+    Info (332119):     0.143               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174           -1102.661 CLOCK_50 
+    Info (332119):    -2.174           -1473.861 CLOCK_50 
     Info (332119):     1.322               0.000 my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):    17.854               0.000 CLOCK2_50 
 Info: Analyzing Fast 1100mV 0C Model
@@ -647,28 +647,28 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.336
+Info (332146): Worst-case setup slack is -4.493
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.336            -776.901 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.162
+    Info (332119):    -4.493           -1206.298 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.129
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.162               0.000 CLOCK_50 
+    Info (332119):     0.129               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174           -1196.799 CLOCK_50 
+    Info (332119):    -2.174           -1681.591 CLOCK_50 
     Info (332119):     1.322               0.000 my_clock_gen|DE_Clock_Generator_Audio|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):    17.804               0.000 CLOCK2_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5233 megabytes
-    Info: Processing ended: Mon Nov 15 11:30:33 2021
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 5252 megabytes
+    Info: Processing ended: Mon Nov 15 15:34:30 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:10
 
 

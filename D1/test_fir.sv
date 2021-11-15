@@ -3,7 +3,7 @@ module test_fir;
 timeunit 1ns;
 timeprecision 100ps;
 
-parameter N = 16;
+parameter N = 31;
 parameter M = 24;
 
 logic signed [M-1:0] in;
