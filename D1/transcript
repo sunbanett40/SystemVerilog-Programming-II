@@ -1,0 +1,19 @@
+# Compile of fir.sv was successful.
+# Compile of test_fir.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.test_fir
+# vsim -voptargs="+acc" work.test_fir 
+# Start time: 11:22:42 on Nov 15,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "fir(fast)".
+# Loading sv_std.std
+# Loading work.test_fir(fast)
+# Loading work.fir(fast)
+add wave -position end  sim:/test_fir/in
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jdb1g20  Hostname: JFB59-R2213-A22  ProcessID: 17192
+#           Attempting to use alternate WLF file "./wlftzja6kn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftzja6kn
+add wave -position end  sim:/test_fir/out
+run -all
