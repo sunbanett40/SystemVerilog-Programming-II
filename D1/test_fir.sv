@@ -3,12 +3,16 @@ module test_fir;
 timeunit 1ns;
 timeprecision 100ps;
 
-logic signed [15:0] in;
+parameter N = 16;
+parameter M = 24;
+
+logic signed [M-1:0] in;
 logic input_ready, ck, rst;
-logic signed [15:0] out;
+logic signed [M-1:0] out;
 logic output_ready;
 
 const int input_frequency = 5000;
+
 
 fir CUT (.*);
 

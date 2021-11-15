@@ -1,6 +1,6 @@
 // FIR N stages; M bit samples.
 
-module fir #(parameter N=16; parameter M=24;)
+module fir #(parameter N=16, parameter M=24)
 		(input logic signed [M-1:0] in,
 		input logic input_ready, ck, rst, 
 		output logic signed [M-1:0] out,
@@ -20,9 +20,9 @@ const sample_array coefficients [0:N-1] =
      14633, 4522, -2262,-1257,
      645, 318, -134, -81};
 
-logic unsigned [$clog2(N)-1:0] address; //clog2 of 16 is 4
+logic unsigned [$clog2(M)-1:0] address; //clog2 of 16 is 4
 
-logic signed [2*N-1:0] sum;
+logic signed [2*M-1:0] sum;
 
 typedef enum logic [1:0] {waiting, loading, processing, saving} state_type;
 state_type state, next_state;
