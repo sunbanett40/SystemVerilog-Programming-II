@@ -8,51 +8,387 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/MentorGraphics/modeltech64_2020.1/examples
+Z0 dC:/MentorGraphics/modeltech64_2020.1/examples
 T_opt
 !s110 1636055096
 VPRVLWLW=D4z^S?^eYUE:R1
 04 8 4 work test_fir fast 0
 =1-0050569d4bc9-61843836-356-5da8
 o-quiet -auto_acc_if_foreign -work work +acc
-Z0 tCvgOpt 0
+Z1 tCvgOpt 0
 n@_opt
 OL;O;2020.1;71
-vfir
-Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1636055080
+R0
+vAltera_UP_Audio_Bit_Counter
+!s110 1636970617
 !i10b 1
-!s100 <R8YTzgXSA=[995VF0[KA1
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IgRUfT>Mhz52UI_F]0U]aH1
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-S1
-Z5 dH:/D1/Working_file
-w1636055007
-8H:/D1/Working_file/fir.sv
-FH:/D1/Working_file/fir.sv
-!i122 0
-L0 3 107
+!s100 ^`ieM0AcUM]g[gG@8D5ST0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IbTzidkBaigc;c@X@<11e]3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 dH:/D1/SystemVerilog-Programming-II/D1
+Z5 w1636970477
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_Bit_Counter.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_Bit_Counter.v
+!i122 2
+L0 49 99
 Z6 OL;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1636055079.000000
-!s107 H:/D1/Working_file/fir.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/D1/Working_file/fir.sv|
+!s108 1636970617.000000
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_Bit_Counter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_Bit_Counter.v|
 !i113 0
-Z7 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R0
-vtest_fir
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
+n@altera_@u@p_@audio_@bit_@counter
+vAltera_UP_Audio_In_Deserializer
+Z8 !s110 1636970618
+!i10b 1
+!s100 <;Llk03i1Lk79c;_Em52Z3
 R2
+I8Hgk0J]A9Mbi[MZh0YO_C3
+R3
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_In_Deserializer.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_In_Deserializer.v
+!i122 3
+L0 47 203
+R6
+r1
+!s85 0
+31
+Z9 !s108 1636970618.000000
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_In_Deserializer.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_In_Deserializer.v|
+!i113 0
+R7
+R1
+n@altera_@u@p_@audio_@in_@deserializer
+vAltera_UP_Audio_Out_Serializer
+R8
+!i10b 1
+!s100 dP2RCmX=LC750^za`I`[g2
+R2
+IO5FhC42m@bUzZ2`kgOGi03
+R3
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_Out_Serializer.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_Out_Serializer.v
+!i122 4
+L0 47 208
+R6
+r1
+!s85 0
+31
+R9
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_Out_Serializer.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Audio_Out_Serializer.v|
+!i113 0
+R7
+R1
+n@altera_@u@p_@audio_@out_@serializer
+vAltera_UP_Clock_Edge
+R8
+!i10b 1
+!s100 nKV73@VNSRBN@mbYj>>m^3
+R2
+IO7<lB9:eKP`7mVL]V]I@K1
+R3
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Clock_Edge.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Clock_Edge.v
+!i122 5
+L0 48 83
+R6
+r1
+!s85 0
+31
+R9
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Clock_Edge.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Clock_Edge.v|
+!i113 0
+R7
+R1
+n@altera_@u@p_@clock_@edge
+vAltera_UP_I2C
+Z10 !s110 1636970619
+!i10b 1
+!s100 iT]@^1]PR`7Ngen0jGza@1
+R2
+IzXLY@JKDIQ@AGU=m_:8<e0
+R3
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C.v
+!i122 6
+L0 48 273
+R6
+r1
+!s85 0
+31
+R9
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C.v|
+!i113 0
+R7
+R1
+n@altera_@u@p_@i2@c
+vAltera_UP_I2C_AV_Auto_Initialize
+R10
+!i10b 1
+!s100 hDk_QkdSFX2^nVa:lcT]h1
+R2
+IzVP?23c^1Uh8`<=<lFk8B0
+R3
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_AV_Auto_Initialize.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_AV_Auto_Initialize.v
+!i122 7
+L0 48 320
+R6
+r1
+!s85 0
+31
+Z11 !s108 1636970619.000000
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_AV_Auto_Initialize.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_AV_Auto_Initialize.v|
+!i113 0
+R7
+R1
+n@altera_@u@p_@i2@c_@a@v_@auto_@initialize
+vAltera_UP_I2C_DC_Auto_Initialize
+R10
+!i10b 1
+!s100 dBG@KYT5oBz[WRjhPY]mV1
+R2
+I<1f[RBckYb^z9[TF_m^^G2
+R3
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_DC_Auto_Initialize.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_DC_Auto_Initialize.v
+!i122 8
+L0 48 319
+R6
+r1
+!s85 0
+31
+R11
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_DC_Auto_Initialize.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_DC_Auto_Initialize.v|
+!i113 0
+R7
+R1
+n@altera_@u@p_@i2@c_@d@c_@auto_@initialize
+vAltera_UP_I2C_LCM_Auto_Initialize
+Z12 !s110 1636970620
+!i10b 1
+!s100 LUTHKmL7zLQf_]SDNXGcL2
+R2
+I1k76QNBS_Th4??RbZU7`H0
+R3
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_LCM_Auto_Initialize.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_LCM_Auto_Initialize.v
+!i122 9
+L0 48 301
+R6
+r1
+!s85 0
+31
+R11
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_LCM_Auto_Initialize.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_I2C_LCM_Auto_Initialize.v|
+!i113 0
+R7
+R1
+n@altera_@u@p_@i2@c_@l@c@m_@auto_@initialize
+vAltera_UP_Slow_Clock_Generator
+R12
+!i10b 1
+!s100 TPOJQUV5e?oSfRNaPA;bZ1
+R2
+I5iliko;agdgi:eR;Knh013
+R3
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Slow_Clock_Generator.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Slow_Clock_Generator.v
+!i122 10
+L0 53 140
+R6
+r1
+!s85 0
+31
+Z13 !s108 1636970620.000000
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Slow_Clock_Generator.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_Slow_Clock_Generator.v|
+!i113 0
+R7
+R1
+n@altera_@u@p_@slow_@clock_@generator
+vAltera_UP_SYNC_FIFO
+R12
+!i10b 1
+!s100 ;YN<<kFULRXZ[WcYI8SLH0
+R2
+IozZ[aZj@S^FkaK3B=9mZJ2
+R3
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_SYNC_FIFO.v
+FH:/D1/SystemVerilog-Programming-II/D1/Altera_UP_SYNC_FIFO.v
+!i122 11
+L0 47 120
+R6
+r1
+!s85 0
+31
+R13
+!s107 H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_SYNC_FIFO.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/Altera_UP_SYNC_FIFO.v|
+!i113 0
+R7
+R1
+n@altera_@u@p_@s@y@n@c_@f@i@f@o
+vaudio_and_video_config
+R12
+!i10b 1
+!s100 :0`liZ]QDWag^ZRZR7Fhz1
+R2
+I]YEV2i5`_c[OP2o^WR<7A3
+R3
+R4
+Z14 w1636970481
+8H:/D1/SystemVerilog-Programming-II/D1/audio_and_video_config.v
+FH:/D1/SystemVerilog-Programming-II/D1/audio_and_video_config.v
+!i122 12
+L0 49 208
+R6
+r1
+!s85 0
+31
+R13
+!s107 H:/D1/SystemVerilog-Programming-II/D1/audio_and_video_config.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/audio_and_video_config.v|
+!i113 0
+R7
+R1
+vaudio_codec
+Z15 !s110 1636970621
+!i10b 1
+!s100 od@NZU0bQ_XnEDY2HX4Id1
+R2
+IP`ghSWJ6a^9]Q=oQRb_ol2
+R3
+R4
+R14
+8H:/D1/SystemVerilog-Programming-II/D1/audio_codec.v
+FH:/D1/SystemVerilog-Programming-II/D1/audio_codec.v
+!i122 13
+L0 49 223
+R6
+r1
+!s85 0
+31
+Z16 !s108 1636970621.000000
+!s107 H:/D1/SystemVerilog-Programming-II/D1/audio_codec.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/audio_codec.v|
+!i113 0
+R7
+R1
+vclock_generator
+R15
+!i10b 1
+!s100 KDh=]ZznV7bE0YnLIUcH42
+R2
+IFnUV8?S01i_Gc:^[3[hdb1
+R3
+R4
+R14
+8H:/D1/SystemVerilog-Programming-II/D1/clock_generator.v
+FH:/D1/SystemVerilog-Programming-II/D1/clock_generator.v
+!i122 14
+L0 48 146
+R6
+r1
+!s85 0
+31
+R16
+!s107 H:/D1/SystemVerilog-Programming-II/D1/clock_generator.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/clock_generator.v|
+!i113 0
+R7
+R1
+vD1
+Z17 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z18 !s110 1636970622
+!i10b 1
+!s100 K6F:dz?HXTHSo>?NUA2aO3
+R2
+IWaR:3kVnN0DBXWg_HBaO12
+R3
+S1
+R4
+R5
+8H:/D1/SystemVerilog-Programming-II/D1/D1.sv
+FH:/D1/SystemVerilog-Programming-II/D1/D1.sv
+!i122 15
+L0 1 108
+R6
+r1
+!s85 0
+31
+R16
+!s107 H:/D1/SystemVerilog-Programming-II/D1/D1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/D1.sv|
+!i113 0
+Z19 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@d1
+vfir
+R17
+R18
+!i10b 1
+!s100 <R8YTzgXSA=[995VF0[KA1
+R2
+IVH@ea9X4dWADm70]D>S9h1
+R3
+S1
+R4
+R14
+8H:/D1/SystemVerilog-Programming-II/D1/fir.sv
+FH:/D1/SystemVerilog-Programming-II/D1/fir.sv
+!i122 16
+L0 3 107
+R6
+r1
+!s85 0
+31
+!s108 1636970622.000000
+!s107 H:/D1/SystemVerilog-Programming-II/D1/fir.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/D1/SystemVerilog-Programming-II/D1/fir.sv|
+!i113 0
+R19
+R1
+vtest_fir
+R17
+!s110 1636055080
 !i10b 1
 !s100 WAM>ob4@fK5QhbYU7DhXS0
-R3
+R2
 I0[1J4i@JJ9ZcA5aX5LLhT1
-R4
+R3
 S1
-R5
+dH:/D1/Working_file
 w1636042084
 8H:/D1/Working_file/test_fir.sv
 FH:/D1/Working_file/test_fir.sv
@@ -66,5 +402,5 @@ r1
 !s107 H:/D1/Working_file/test_fir.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|H:/D1/Working_file/test_fir.sv|
 !i113 0
-R7
-R0
+R19
+R1

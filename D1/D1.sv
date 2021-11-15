@@ -7,10 +7,10 @@ module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
 		   output logic AUD_DACDAT);
 	
 	// FIR filter module io
-	logic signed [15:0] in_left, in_right;
-	logic input_ready, ck, rst;
-	logic signed [15:0] out_left, out_right;
-	logic output_ready;
+	//logic signed [15:0] in_left, in_right;
+	//logic input_ready, ck, rst;
+	//logic signed [15:0] out_left, out_right;
+	//logic output_ready;
 	
 	// Local wires.
 	wire read_ready, write_ready, read, write;
@@ -23,19 +23,19 @@ module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
 	// 
 	/////////////////////////////////
 	
-	assign writedata_left = out_left;
-	assign in_left = readdata_left;
+	//assign writedata_left = out_left;
+	//assign in_left = readdata_left;
 	
-	assign writedata_right = out_right;
-	assign in_right = readdata_right;
+	//assign writedata_right = out_right;
+	//assign in_right = readdata_right;
 	
 	assign read = read_ready;
-	assign write = write_ready;
+	//assign write = write_ready;
 	
-	assign input_ready = read_ready;
-	assign ck = CLOCK_50;
-	assign rst = reset;
-	assign write_ready = output_ready;
+	//assign input_ready = read_ready;
+	//assign ck = CLOCK_50;
+	//assign rst = reset;
+	//assign write_ready = output_ready;
 	
 	// FIR filter modules
 
@@ -46,10 +46,10 @@ module D1 (input logic CLOCK_50, CLOCK2_50, input logic [0:0] KEY,
        output logic output_ready);
 	*/
 	
-	fir fir_left (.in(in_left), .input_ready(input_ready), .ck(ck), .rst(rst),
-				.out(out_left), .output_ready(output_ready));
-	fir fir_right (.in(in_right), .input_ready(input_ready), .ck(ck), .rst(rst),
-				.out(out_right), .output_ready(output_ready));
+	fir fir_left (.in(readdata_left[23:8]), .input_ready(write_ready), .ck(CLOCK_50), .rst(reset),
+				.out(writedata_left[23:8]), .output_ready(write));
+	fir fir_right (.in(readdata_right[23:8]), .input_ready(write_ready), .ck(CLOCK_50), .rst(reset),
+				.out(writedata_right[23:8]));
 	
 /////////////////////////////////////////////////////////////////////////////////
 // Audio CODEC interface. 
