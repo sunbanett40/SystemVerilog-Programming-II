@@ -17,3 +17,7 @@ add wave -position end  sim:/test_fir/in
 #           Using alternate file: ./wlftzja6kn
 add wave -position end  sim:/test_fir/out
 run -all
+# Break key hit
+# Break in Module test_fir at H:/D1/SystemVerilog-Programming-II/D1/test_fir.sv line 22
+# End time: 11:45:25 on Nov 15,2021, Elapsed time: 0:22:43
+# Errors: 0, Warnings: 5
